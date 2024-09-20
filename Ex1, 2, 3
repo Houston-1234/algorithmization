@@ -13,4 +13,15 @@ print(integer_var, float_var, string_var, list_var, tuple_var, dict_var, set_var
 name = "Max"
 age = 18
 average_grade = 4.46
-favorite_movies = ["","","","",""]
+favorite_movies = ["Перевозчик","Васаби","Форсаж 7"]
+personal_info = ("Масленников","№20","4.46")
+skills = {"интеллект": "продвинутый", "физ. сила": "средняя"}
+visited_countries = {"Россия", "Россия", "Россия"}
+has_driver_license = False
+
+#Ex 3
+Cpu = "Intel Core i7-12700kf"
+RAM = "32 gb"
+speed_ether = "100 mbps"
+list = [Cpu, RAM, speed_ether]
+print(list)

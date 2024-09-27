@@ -1,0 +1,22 @@
+#ex 1
+ur_age = int(input('Введи свой возраст '))
+ur_age222 = int(input('Введи возраст друга '))
+print('сумма ваших возрастов = ', ur_age+ur_age222)
+#ex 2
+name = input("введи свое имя ")
+sub_name = input("введи свою фамилию ")
+print("пива тебе, ", name, sub_name)
+#ex 3
+menu = ("Меню : \n 1) суп \n 2) паста \n 3) десерт")
+print(menu)
+#ex 4
+print(' *** \n *** \n ***')
+ex 5
+x = int(input("введи число "))
+x1 = x - 3
+x2 = x - 2
+x3 = x - 1
+x4 = x + 3
+x5 = x + 2
+x6 = x + 1
+print(x, "\n", x1, x2, x3, "\n", x4, x5, x6)

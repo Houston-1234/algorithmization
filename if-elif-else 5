@@ -1,0 +1,45 @@
+#ex 1
+age=int(input("Введите ваш возраст "))
+if age<18:
+    print("вы несовершеннолетний.")
+elif 18<age<65:
+    print("вы трудоспособный человек.")
+elif age>65:
+    print("вы пенсионер. где ваша пенсия?")
+#ex 2
+sale=int(input("Введите вашу сумму "))
+if sale<1000:
+    print("скидки нет.")
+elif 1000<sale<5000:
+    print("вам скидка 5%.")
+elif sale>5000:
+    print("вам скидка 10%")
+#ex 3
+a=int(input("Введи 1 число "))
+b=int(input("Введи 2 число "))
+c=input("Выберите нужную операцию (+, -, *, /) ")
+if c=="+":
+    print(a, "+", b, "равно", a+b)
+if c=="-":
+    print(a, "-", b, "равно", a-b)
+if c=="*":
+    print(a, "*", b, "равно", a*b)
+if c=="+":
+    print(a, "/", b, "равно", a/b)
+else:
+    print("Неверная операция.")
+#ex 4
+a=int(input("введите число "))
+b=str(a)
+if (a%2==0) and (b[-1]=="2") or (b[-1]=="6"):
+    print(True)
+else:
+    print(False)
+#ex 5
+akey=input("Введите пароль ")
+bkey = "bananchik"
+if akey==bkey:
+    print("Доступ разрешен")
+else:
+    print("Неверный пароль")
+#ex 6

@@ -43,3 +43,27 @@ if akey==bkey:
 else:
     print("Неверный пароль")
 #ex 6
+#ex 6
+# m=input("введите позицию: ")
+# blue=['b1','b3','b7','c1','c4','c5','c6','c8','c9']
+# green=['b2','b4','b6','b8','c2','c7','c10','c11']
+# if m in blue:
+#     print('в этом квадрате сидит синий попугай')
+# if m in green:
+#     print('в этом квадрате сидит зеленый попугай')
+# if m == 'b5' or 'c3' or 'c12':
+#     print('здесь никто не сидит')
+# ex 7
+# n=int(input())
+# b=int(input())
+# if n//b==0:
+#     print('число n кратно b')
+# else:
+#     print('число n не кратно b')
+# ex 8
+lvl=int(input('Введите лвл героя '))
+hp=int(input('Введите hp героя '))
+if lvl<5:
+    print('недостатончый уровень для продолжения')
+else:
+    if hp

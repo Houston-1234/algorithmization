@@ -61,9 +61,37 @@ else:
 # else:
 #     print('число n не кратно b')
 # ex 8
-lvl=int(input('Введите лвл героя '))
-hp=int(input('Введите hp героя '))
-if lvl<5:
-    print('недостатончый уровень для продолжения')
-else:
-    if hp
+#lvl = int(input("введите лвл героя: "))
+#hp = int(input("введите hp героя: "))
+
+#if lvl < 0 or hp < 0 or hp > 100:
+#    print("некорректные данные")
+#elif lvl < 5:
+#    print("у вас низкий уровень")
+#else:
+#    if hp > 50:
+#        print("вы готовы к миссии")
+#    elif 20 <= hp <= 50:
+#        print("будьте осторожны, ваше хп низкое")
+#    else:
+#        print("вашего хп недостаточно  для выполнения миссии")
+# ex 9
+# inventory = ["яблоко", "шариковая ручка"]
+# if "ключ" in inventory and "фонарь" in inventory:
+#     print("Вы можете пройти через дверь.")
+# elif "ключ" not in inventory and "фонарь" not in inventory:
+#     print("У вас нет ни ключа, ни фонаря, вы не можете пройти через дверь.")
+# elif "ключ" not in inventory:
+#     print("У вас нет ключа, вы не можете открыть дверь.")
+# elif "фонарь" not in  inventory:
+#     print("У вас нет фонаря, слишком темно, чтобы пройти.")
+#ex 10
+#king = "Enemies are coming! Are the archers ready?"
+# warrior = "For the Alliance!"
+# magician = "The spell is ready."
+# if "!" in warrior:
+#     print("тут восклицательный знак")
+# elif "?" in king:
+#     print("тут вопросительный знак")
+# elif "." in magician:
+#     print("тут точка")

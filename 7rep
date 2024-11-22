@@ -1,0 +1,5 @@
+# ex1
+# def car(marka,color,speed):
+#     return f"марка - {marka}, цвет - {color}, скорость - {speed} км/ч"
+# car_1=car("ferrari", "dark cherry", "478" )
+# print(car_1)

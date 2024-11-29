@@ -1,9 +1,12 @@
 #ex1
+
 # def car(marka,color,speed):
 #     return f"марка - {marka}, цвет - {color}, скорость - {speed} км/ч"
 # car_1=car("ferrari", "dark cherry", "478" )
 # print(car_1)
+
 #ex2
+
 # def switch_check(switch):
 #     if switch is True:
 #         print("True работает")
@@ -15,7 +18,9 @@
 # switch_check(switch_1)
 # switch_check(switch_2)
 # switch_check(switch_3)
+
 #ex3
+
 # a = int(input("введи число 1 стороны: "))
 # b = int(input("введи число 2 стороны: "))
 # c = int(input("введи число 3 стороны: "))
@@ -33,7 +38,9 @@
 #         print("тип треугольника - разносторонный")
 # triangle(a,b,c)
 # print(f"периметр - {p}, \nполупериметр - {s}, \nплощадь - {f}")
+
 #ex4
+
 in_numb=int(input("введите исходное число: "))
 out_numb=int(input("введите конечное число: "))
 def num_change(in_numb, out_numb):
@@ -46,4 +53,67 @@ def num_change(in_numb, out_numb):
         count+=1
     return(count,in_numb,out_numb)
 print(num_change(in_numb,out_numb))
+
+# ex5
+
+# player =0
+# def info_player():
+#     print(f"игрок пробежал {player} км")
+# def run_player(km):
+#     global player
+#     player+=km/2
+# info_player()
+# run_player(30)
+# run_player(12.5)
+# info_player()
+
+# ex6
+
+def number_properties(number: int) -> str:
+    """
+    Определяет, является ли число чётным или нечётным, а также вычисляет его умножение на 2 или квадрат.
+
+    Функция выполняет следующие действия:
+    - Проверяет, чётное ли число.
+    - Вычисляет умножение на 2/квадрат числа соответственно.
+
+    Параметры:
+    number (int): Целое число, для которого нужно определить чётность и вычислить умножение на 2/квадрат.
+
+    Возвращает:
+    str: Строку с информацией о числе:
+        - Является ли оно чётным или нечётным.
+        - Умножение на 2/Квадрат числа соответственно.
+
+    Исключения:
+    - Если число не является целым (например, дробное или строка), выбрасывается ошибка ValueError.
+
+    Пример:
+    >> number_properties(4)
+    Число: 4
+    Чётное: True
+    Умножение числа: 8
+
+    >> number_properties(5)
+    Число: 5
+    Чётное: False
+    Квадрат числа: 25
+    """
+
+    # Проверка на чётность
+    is_even = number % 2 == 0
+
+    #
+    if is_even == True:
+        sq=number*2
+    else:
+        sq=number**2
+
+    # Формирование строки с результатами
+    return f"Число: {number}\nЧётное: {is_even}\nДействие с числом: {sq}"
+
+# Пример использования:
+print(number_properties.__doc__)  # Документация функции
+print(number_properties(4))  # Число 4
+print(number_properties(5))  # Число 5
 

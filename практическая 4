@@ -1,0 +1,24 @@
+# variant 1
+# ex1
+# a=int(input())
+# if a<0:
+#     print(-a)
+# elif a==0:
+#     print(1)
+# else:
+#     print(a)
+# ex2
+# a=input()
+# if '.' in a or ',' in a:
+#     print(True)
+# else:
+#     print(False)
+# ex3
+# a=int(input())
+# b=int(input())
+# if a%3==0 and b%3==0:
+#     print(True)
+# elif a%3==0 or b%3==0:
+#     print("Одно число делится на 3")
+# else:
+#     print(False)

@@ -34,3 +34,16 @@
 # triangle(a,b,c)
 # print(f"периметр - {p}, \nполупериметр - {s}, \nплощадь - {f}")
 #ex4
+in_numb=int(input("введите исходное число: "))
+out_numb=int(input("введите конечное число: "))
+def num_change(in_numb, out_numb):
+    count=0
+    while in_numb != out_numb:
+        if in_numb>out_numb:
+            in_numb-=1
+        elif in_numb<out_numb:
+            in_numb+=1
+        count+=1
+    return(count,in_numb,out_numb)
+print(num_change(in_numb,out_numb))
+

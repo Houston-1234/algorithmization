@@ -1,9 +1,21 @@
-ex1
+#ex1
 # def car(marka,color,speed):
 #     return f"марка - {marka}, цвет - {color}, скорость - {speed} км/ч"
 # car_1=car("ferrari", "dark cherry", "478" )
 # print(car_1)
-ex2
+#ex2
+# def switch_check(switch):
+#     if switch is True:
+#         print("True работает")
+#     elif switch is False:
+#         print("False не работает")
+#     else:
+#         print("None сломан")
+#
+# switch_check(switch_1)
+# switch_check(switch_2)
+# switch_check(switch_3)
+#ex3
 # a = int(input("введи число 1 стороны: "))
 # b = int(input("введи число 2 стороны: "))
 # c = int(input("введи число 3 стороны: "))
@@ -21,3 +33,4 @@ ex2
 #         print("тип треугольника - разносторонный")
 # triangle(a,b,c)
 # print(f"периметр - {p}, \nполупериметр - {s}, \nплощадь - {f}")
+#ex4

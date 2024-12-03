@@ -99,3 +99,116 @@
 #     print(":(")
 # else:
 #     print(":/")
+# variant5 ex1
+# a=int(input("введи первое число: "))
+# b=int(input("введи второе число: "))
+# if a>b:
+#     print(a**b)
+# elif a<b:
+#     print(b**a)
+# else:
+#     print(a+b)
+# ex2
+# new_massage="Hello! How are you?"
+# print(new_massage)
+# ans=input("ответь: ")
+# if ans[0]==new_massage[0]:
+#     print(True)
+# else:
+#     print(False)
+# ex3
+# a=int(input("введи первое число: "))
+# b=int(input("введи второе число: "))
+# print(f"у нас есть 2 отрезка: а={a} и b={b}")
+# if a>b:
+#     print(f"отрезок a больше чем b на {a-b}")
+# if a<b:
+#     print(f"отрезок a меньше чем b на {b-a}")
+# else:
+#     print(f"отрезки a и b одинаковые")
+# variant 6 ex1
+# a=input("задай строку ")
+# if a[0]==a[-1]:
+#     print(True)
+# else:
+#     print(False)
+# ex2
+# a=int(input("введи число "))
+# if a%2==0:
+#     print(a**2)
+# elif a%3==0:
+#     print(a**3)
+# else:
+#     print(a*100)
+# ex3
+# a=int(input("введи 1 число "))
+# b=int(input("введи 2 число "))
+# if a==-a:
+#     print(a+1000, b)
+# if b==-b:
+#     print(a, b+1000)
+# if a<0 and b<0:
+#     print(False)
+# if a>0 and b>0:
+#     print(True)
+# variant 7 ex1
+# a=input("введи строку на русском языке ")
+# if (a[-1]=="я") or (a[-1]=="и") or (a[-1]=="е") or (a[-1]=="ю"):
+#     print(True)
+# else:
+#     print(False)
+# ex2
+# a=int(input("введи 1 сторону "))
+# b=int(input("введи 2 сторону "))
+# c=int(input("введи 3 сторону "))
+# if (a==0) or (b==0) or (c==0) or (a<0) or (b<0) or (c<0):
+#     print(False)
+# else:
+#     print(True)
+# ex3
+# a=int(input("введи число "))
+# b=a%10
+# if b==0:
+#     print(a**10)
+# if b==1:
+#     print(a/3)
+# if b==2:
+#     print(a//2)
+# if b>=3:
+#     print(a**2)
+# variant8 ex1
+# parol=input("введи пароль ")
+# if parol=="qwerty123" or len(parol)<8:
+#     print(False)
+# else:
+#     print(True)
+# ex2
+# pc_number=777
+# a=int(input("введи 1 число "))
+# b=int(input("введи 2 число "))
+# if (a<pc_number<b) or (b<pc_number<a):
+#     print(True)
+# else:
+#     print(False)
+# ex3
+# lamp_1=0
+# lamp_2=0
+# a=int(input("какую лампочку зажечь? "))
+# if a==1:
+#     lamp_1=1
+#     print("горит лампочка №1")
+# elif a==2:
+#     lamp_2=2
+#     print("горит лампочка №2")
+# else:
+#     print("обе лампочки не горят")
+# veriant9 ex1
+# switch_1=False
+# switch_2=False
+# a=input(f"switch_1={switch_1} \nswitch_2={switch_2} \nВключить? ")
+# if a=="да":
+#     switch_1=True
+#     switch_2=True
+#     print(f"оба разъема включены \nswitch_1={switch_1} \nswitch_2={switch_2}")
+# else:
+#     print(f"switch_1={switch_1} \nswitch_2={switch_2}")

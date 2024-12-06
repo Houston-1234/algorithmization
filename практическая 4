@@ -212,3 +212,47 @@
 #     print(f"оба разъема включены \nswitch_1={switch_1} \nswitch_2={switch_2}")
 # else:
 #     print(f"switch_1={switch_1} \nswitch_2={switch_2}")
+# ex2
+# a=int(input("введите число: "))
+# if (a>0) and (a%2==0):
+#     print(True, "even")
+# elif (a>0) and (a%2!=0):
+#     print(True, "odd")
+# else:
+#     print(False)
+# ex3
+# str=input("введи строку: ")
+# if str[0]=='/':
+#     print("command...")
+# else:
+#     print("its string")
+# variant10 ex1
+# str=input("введи строку: ")
+# if len(str)==0:
+#     print("None")
+# elif len(str)<=5:
+#     print("short")
+# elif 6<len(str)<10:
+#     print("normal")
+# elif len(str)>10:
+#     print("long")
+# ex2
+# a=int(input("введи число: "))
+# if a<0:
+#     b=1_000_000
+#     a,b=b,a
+#     print(a)
+# elif a==0:
+#     c=2
+#     a,c=c,a
+#     print(f"{c}**2={c**2}")
+# else:
+#     print(a**3)
+# ex3
+# num_1=10
+# num_2=100
+# a=int(input("введи число: "))
+# if num_1 < a < num_2:
+#     print(True)
+# else:
+#     print(False)

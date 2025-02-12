@@ -1,0 +1,112 @@
+EX 1
+class Create_personage:
+    def __init__(self,name,clas,hp,dmg):
+        self.name = name
+        self.clas = clas
+        self.hp = hp
+        self.dmg = dmg
+
+    def print_info(self):
+        print(f"Name: {self.name}\nClass: {self.clas}\nHP: {self.hp}\nDMG: {self.dmg}")
+
+    def go_on_a_trip(self):
+        print(f"Персонаж {self.name} отправляется в путешествие в Питер!")
+
+    def go_back(self):
+        print(f"Персонаж {self.name} вернулся с Питера живым")
+
+    def start_training(self):
+        self.hp +=5
+        self.dmg +=5
+        print(f"Персонаж {self.name} отправляется в горы на тренировку")
+
+    def start_battle(self):
+        print(f"Персонаж {self.name} начинает битву!\nЕго показатели:\nName: {self.name}\nClass: {self.clas}\nHP: {self.hp}\nDMG: {self.dmg}")
+
+pers=Create_personage("ИГААРЬ","Воин",100,86)
+pers.print_info()
+pers.go_on_a_trip()
+pers.go_back()
+pers.start_training()
+pers.print_info()
+pers.start_battle()
+
+EX 2
+class Room:
+    items=[]
+    theme=[]
+    def __init__(self, name):
+        self.name = name
+    def print_items(self):
+        print(f"Все предметы в комнате {self.name}: {', '.join(self.items)}")
+
+    def add_item(self, *item):
+        self.items.extend(item)
+    def del_item(self, item):
+        if item in self.items:
+            self.items.remove(item)
+            print(f"Все предметы в комнате: {', '.join(self.items)}")
+        else:
+            print("Такого предмета нет в комнате")
+
+    def add_decore(self, *items):
+        self.items.extend(items)
+
+    def set_theme(self, theme):
+        self.theme.extend(theme)
+
+    def print_theme(self):
+        print(f"У вас установлена {str(self.theme)} тема")
+
+
+room1 = Room("Кухня")
+room1.add_item("Холодильник", "Стул", "Стол")
+room1.print_items()
+room1.del_item("Стул")
+room1.add_decore("Kартина")
+room1.set_theme("классическая")
+room1.print_items()
+room1.print_theme()
+
+EX 3
+class Students:
+    def __init__(self, name, kurs, sr_ball):
+        self.name = name
+        self.kurs = kurs
+        self.sr_ball = sr_ball
+
+    def st_info(self):
+        print(f"имя студента: {self.name}, курс: {self.kurs}, средний балл: {self.sr_ball}")
+
+    def kurs_up(self):
+        if self.kurs>=4:
+            print(f"студент {self.name} уже закончил(а) обучение")
+        else:
+            self.kurs+=1
+            print(f"студент {self.name} переведен на {self.kurs}-й курс")
+
+    def ball_up(self, ball):
+        if 5< ball <0:
+            print(f"ср.балл не входит в диапазон допущенного")
+        else:
+            self.sr_ball = (self.sr_ball+ball)/2
+            print(f"обновление среднего балла - {self.sr_ball}")
+
+    def stipendiat(self):
+        if self.sr_ball>=4.5:
+            print(f"студент {self.name} имеет право быть стипендиатом")
+        else:
+            print(f"студент {self.name} не имеет права быть стипендиатом")
+
+st_1 = Students("Максим", 1,4.8)
+st_2 = Students("Олег", 2, 4.0 )
+st_3 = Students("Алексей", 3,4.5)
+st_1.kurs_up()
+st_2.kurs_up()
+st_3.kurs_up()
+st_1.ball_up(5)
+st_2.ball_up(4)
+st_3.ball_up(3)
+st_1.stipendiat()
+st_2.stipendiat()
+st_3.stipendiat()

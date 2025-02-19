@@ -1,0 +1,21 @@
+import random
+class BankAcc:
+    def __init__(self, owner, balance=0.0):
+        self.owner = owner
+        self.balance = balance
+        self.account_number = ''.join(str(random.randint(0,9)) for _ in range(10))
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposit:{amount}. New balance:{self.balance}")
+    def withdaw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdraw:{amount}. New balance:{self.balance}")
+        else:
+            print("No money")
+    def get_balance(self):
+        return self.balance
+owner_1 = BankAcc("Baklazhan", 10000)
+print(f"account: {owner_1.account_number}, balance:{owner_1.get_balance()}")
+owner_1.deposit(5000)
+owner_1.withdaw(2000)

@@ -5,22 +5,24 @@ class Hotel:
     def info_hotel(self):
         print(f"Название отеля - {self.name}\nСтатус комнат: ")
         for room, status in self.rooms.items():
-            if status_text = :
-                print("Свободный номер")
+            if status == True:
+                status_text = "cвободный номер"
             else:
                 print("Номер занят")
-        print(f"Номер комнаты - {room}, статус - {status}")
-    def room_reservation(self, room):
-        if room in self.rooms:
-            if room not in self.rooms:
-                print(f"Комнаты {room} не существует")
+            print(f"Номер комнаты - {room}, статус - {status_text}")
+    def room_reservation(self, room_num):
+        if room_num not in self.rooms:
+            print(f"Комнаты {room_num} не существует")
+        else:
+            if self.rooms[room_num]==True:
+                print(f"Номер {room_num} успешно забронирован")
+                self.rooms[room_num]=False
             else:
-                if self.rooms[room]==True:
-                    print(f"Номер {room} успешно забронирован")
-                else:
-                    print(f"Номер {room} уже занят")
+                print(f"Номер {room_num} уже занят")
 hotel = Hotel("Brawl Stars")
 hotel.info_hotel()
 hotel.room_reservation(100)
 hotel.room_reservation(100)
 hotel.room_reservation(10)
+
+

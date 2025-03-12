@@ -6,5 +6,34 @@ class User:
     def get_info(self):
         print(f"username - {self.username}\nemail - {self.email}\nrole - {self.role}")
 class UserAccount(User):
-    def 
-(https://metanit.com/python/tutorial/7.3.php)
+    def set_password(self, new_password):
+        self.__password = new_password
+        print("пароль установлен")
+
+    def check_password(self, password):
+        if password == self.__password:
+            print("Вход удался!")
+
+    def reset_password(self, new_password):
+        if self.role == "admin":
+            self.set_password(new_password)
+        else:
+            print("Недостаточно прав.")
+
+    def failed_attemps(self):
+        self.failed_attemps += 1
+        print("Вход не удался, попробуйте еще раз!")
+        if self.failed_attemps >= 3:
+            print("Аккаунт заблокирован, вход невозможен")
+
+    def ban_account(self):
+        if self.failed_attemps >= 3:
+            print("Аккаунт заблокирован навсегда!")
+
+
+
+
+user1=UserAccount ("Baklazhan", "hahhaah@mail.ru", "admin")
+user1.get_info()
+user1.set_password("Baklazhan")
+user1.reset_password("bakzhan")

@@ -1,0 +1,108 @@
+1) 
+import os
+import subprocess
+
+class MinecraftLauncher:
+    def __init__(self, game_folder="C:\Games\Minecraft\MinecraftLauncher.exe"):
+        self.game_folder = game_folder
+        self.executable = os.path.join(self.game_folder, "MinecraftLauncher.exe")
+
+    def is_game_installed(self):
+        """Проверяет, установлен ли Minecraft в указанной папке"""
+        return os.path.exists(self.executable)
+
+    def launch_game(self):
+        """Запускает Minecraft, если он установлен"""
+        if self.is_game_installed():
+            print("Запуск Minecraft...")
+            subprocess.Popen(self.executable, shell=True)
+        else:
+            print("Ошибка: игра Minecraft не найдена в указанной папке!")
+class GTAVLauncher:
+    def __init__(self, game_folder="D:\Rockstar Games\GTA V\GTA5.exe"):
+        self.game_folder = game_folder
+        self.executable = os.path.join(self.game_folder, "GTAVLauncher.exe")
+    def is_game_installed(self):
+        return os.path.exists(self.executable)
+
+    def launch_game(self):
+        if self.is_game_installed():
+            print("Запуск GTA V...")
+            subprocess.Popen(self.executable, shell=True)
+        else:
+            print("Ошибка: игра GTA V не найдена в указанной папке!")
+class GenshinLauncher:
+    def __init__(self, game_folder="C:\Games\Genshin Impact\GenshinImpact.exe не найден"):
+        self.game_folder = game_folder
+        self.executable = os.path.join(self.game_folder, "MinecraftLauncher.exe")
+    def is_game_installed(self):
+        return os.path.exists(self.executable)
+    def launch_game(self):
+        if self.is_game_installed():
+            print("Ошибка: игра Genshin Impact не найдена в указанной папке!")
+            subprocess.Popen(self.executable, shell=True)
+        else:
+            print("Ошибка: игра Genshin Impact не найдена в указанной папке!")
+
+if __name__ == "__main__":
+    launcher = MinecraftLauncher()
+    launcher.launch_game()
+
+2)
+class File:
+    def __init__(self, filename, size):
+        self.filename = filename
+        self.size = size
+    def open(self):
+        print(f"Открытие файла {self.filename}...")
+    def info(self):
+        print(f"filename - {self.filename}, size - {self.size} (in KB")
+class TextFile(File):
+    def __init__(self, encoding):
+        super().__init__(filename, size)
+        self.encoding = encoding
+    def open(self):
+        print(f"Открытие текстового файла с кодировкой {self.encoding}")
+class ImageFile(File):
+    def __init__(self, resolution):
+        super().__init__(filename, size)
+        self.resolution = resolution
+    def open(self):
+        print(f"Открытие изображения с разрешением {self.resolution}")
+
+text_file = TextFile("doc.txt", 177, "utf-8")
+image_file = ImageFile("photo.jpg", 2500, "1200x1900")
+
+text_file.open()
+image_file.open()
+
+print(text_file.info())
+print(image_file.info())
+
+3)
+class Racing_Car:
+    def __init__(self, brand, model, color, number):
+        self.brand = brand
+        self.model = model
+        self.color = color
+        self.number = number
+    def info_car(self):
+        print(f"Участник №{self.number}\nАвтомобиль: {self.color} {self.brand} {self.model}")
+class Race:
+    def __init__(self, name, spisok):
+        self.name = name
+        self.__spisok = spisok
+    def append_spisok(self,car):
+        self.__spisok += car
+    def start_race(self):
+        print(f"Гонка {self.name} началась")
+
+car_1 = Racing_Car("Mitsubishi", "Lancer Evolution IX", "жёлтый", 28)
+car_1.info_car()
+
+car_2 = Racing_Car("Porsche", "911", "чёрный", 14)
+car_2.info_car()
+
+race_1 = Race("Кольцевые автогонки")
+race_1.append_participants(car_1, car_2)
+race_1.start_race()

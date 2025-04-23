@@ -106,3 +106,55 @@ car_2.info_car()
 race_1 = Race("Кольцевые автогонки")
 race_1.append_participants(car_1, car_2)
 race_1.start_race()
+
+4)
+class MusicFile():
+    def play(self):
+        print("Воспроизведение аудио файла...")
+class MP3_File(MusicFile):
+    def play(self):
+        print("Воспроизведение MP3 файла...")
+class WAV_File(MusicFile):
+    def play(self):
+        print("Воспроизведение WAV файла...")
+class FLAC_File(MusicFile):
+    def play(self):
+        print("Воспроизведение FLAC файла...")
+def playlist(files):
+    for file in files:
+        file.play()
+if __name__ == "__main__":
+    MP3_file = MP3_File()
+    WAV_file = WAV_File()
+    FLAC_file = FLAC_File()
+list=[MP3_file, WAV_file, FLAC_file]
+playlist(list)
+
+5)
+from abc import ABC, abstractmethod
+class Vehicle(ABC):
+    @abstractmethod
+    def move(self):
+        pass
+    @abstractmethod
+    def fuel_type(self):
+        pass
+class Car(Vehicle):
+    def move(self):
+        print("Автомобиль едет по дороге")
+    def fuel_type(self):
+        print("Топливо - бензин")
+class Boat(Vehicle):
+    def move(self):
+        print("Лодка плывет по воде")
+    def fuel_type(self):
+        print("Топливо - дизель")
+def transport(vehicle):
+    for vehicle in vehicles:
+        vehicle.move()
+        vehicle.fuel_type()
+if __name__ == "__main__":
+    car = Car()
+    boat = Boat()
+vehicles=[car, boat]
+transport(vehicles)

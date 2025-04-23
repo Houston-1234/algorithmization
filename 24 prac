@@ -1,0 +1,37 @@
+class Firewall:
+    def __init__(self):
+        self.__open_ports = set()
+    def open_port(self, port):
+        self.__open_ports.add(port)
+    def close_port(self, port):
+        if port in self.__open_ports:
+            self.__open_ports.remove(port)
+    def is_port_open(self, port):
+        return port in self.__open_ports
+    def show_open_ports(self):
+        print(f"Открытые порты: {self.__open_ports}")
+
+class SecureFirewall(Firewall):
+    def __init__(self):
+        super().__init__()
+        self.__log_attempts = {}
+        self.__blocked_ips = set()
+    def block_ip(self, ip):
+        self.__blocked_ips.add(ip)
+    def attempt_connection(self, port, ip):
+        if port in self.__blocked_ips:
+            print(f"IP {ip} - заблокирован")
+            return False
+        if ip not in self.__log_attempts:
+            self.__log_attempts[ip]=[]
+            self.__log_attempts[ip].append(port)
+        if len(self.__log_attempts[ip])>=3:
+            print(f"IP {ip} был заблокирован за неудачные попытки входа")
+            self.block_ip(ip)
+            return False
+        if ip in self.is_port_open(port):
+            print(f"Порт {port} - закрыт")
+            return False
+        else:
+            print(f"Успешное подключение")
+            return 
